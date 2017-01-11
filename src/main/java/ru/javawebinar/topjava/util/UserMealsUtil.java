@@ -23,8 +23,8 @@ public class UserMealsUtil {
         List<UserMealWithExceed> filteredMealsWithExceeded = getFilteredMealsWithExceeded(mealList, LocalTime.of(7, 0), LocalTime.of(12, 0), 2000);
         filteredMealsWithExceeded.forEach(System.out::println);
 
-        List<UserMealWithExceed> filteredMealsWithExceededByCycle = getFilteredMealsWithExceededByCycle(mealList, LocalTime.of(7, 0), LocalTime.of(12, 0), 2000);
-        filteredMealsWithExceededByCycle.forEach(System.out::println);
+//        List<UserMealWithExceed> filteredMealsWithExceededByCycle = getFilteredMealsWithExceededByCycle(mealList, LocalTime.of(7, 0), LocalTime.of(12, 0), 2000);
+//        filteredMealsWithExceededByCycle.forEach(System.out::println);
     }
 
     //Реализация используя strim
