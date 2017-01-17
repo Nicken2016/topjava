@@ -37,14 +37,13 @@ public class UserMealsUtil {
                 Collectors.summingInt(UserMeal::getCalories)));
         return mealList.stream()
                 .filter(um->TimeUtil.isBetween(um.getDateTime().toLocalTime(), startTime, endTime))
-                .map(um->new UserMealWithExceed(um.getDateTime(), um.getDescription(), um.getCalories(),
-                        caloriesSumByDate.get(um.getDateTime().toLocalDate()) > caloriesPerDay))
+                .map(meal -> createWithExceed(meal, caloriesSumByDate.get(meal.getDateTime()) > caloriesPerDay))
                 .collect(Collectors.toList());
 
     }
 
     public static UserMealWithExceed createWithExceed(UserMeal um, boolean exceeded){
-        return new UserMealWithExceed(um.getDateTime(), um.getDescription(), um.getCalories(), exceeded);
+        return new UserMealWithExceed(um.getId(), um.getDateTime(), um.getDescription(), um.getCalories(), exceeded);
     }
 
 
