@@ -13,4 +13,11 @@ public class BaseEntity {
     public boolean isNew(){
         return this.id == null;
     }
+
+    public BaseEntity(Integer id) {
+        this.id = id;
+    }
+
+    public BaseEntity() {
+    }
 }
