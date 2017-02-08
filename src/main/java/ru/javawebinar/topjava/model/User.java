@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.EnumSet;
 import java.util.Set;
 
-class User extends NamedEntity{
+public class User extends NamedEntity{
     private String email;
 //    Length(min =5)
     private String password;
